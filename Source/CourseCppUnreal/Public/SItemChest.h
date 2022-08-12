@@ -23,7 +23,7 @@ public:
   UPROPERTY(VisibleAnywhere)
   UStaticMeshComponent* BaseMesh;
 
-  UPROPERTY(VisibleAnywhere)
+  UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
   UStaticMeshComponent* LidMesh;
 
   // Sets default values for this actor's properties

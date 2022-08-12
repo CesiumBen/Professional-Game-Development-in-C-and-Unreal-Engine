@@ -38,14 +38,14 @@ void USInteractionComponent::PrimaryInteract() {
   FColor lineColor = bBlockingHit ? FColor::Blue : FColor::Red;
 
   for (FHitResult hit : hits) {
-    DrawDebugSphere(
-        GetWorld(),
-        hit.ImpactPoint,
-        radius,
-        32,
-        lineColor,
-        false,
-        2.0f);
+    /*  DrawDebugSphere(
+          GetWorld(),
+          hit.ImpactPoint,
+          radius,
+          32,
+          lineColor,
+          false,
+          2.0f);*/
 
     AActor* hitActor = hit.GetActor();
     if (hitActor) {
@@ -56,7 +56,7 @@ void USInteractionComponent::PrimaryInteract() {
       }
     }
   }
-  DrawDebugLine(GetWorld(), eyeLocation, end, lineColor, false, 2.0f, 0, 2.0f);
+  //(GetWorld(), eyeLocation, end, lineColor, false, 2.0f, 0, 2.0f);
 }
 
 void USInteractionComponent::BeginPlay() { Super::BeginPlay(); }
